@@ -2,7 +2,7 @@
  * @Author                : seyha30<sinseyha1x@gmail.com>                     *
  * @CreatedDate           : 2023-04-27 21:47:19                               *
  * @LastEditors           : seyha30<sinseyha1x@gmail.com>                     *
- * @LastEditDate          : 2023-04-27 21:56:25                               *
+ * @LastEditDate          : 2023-04-27 22:19:16                               *
  * @FilePath              : loading-app/src/App.js                            *
  * @CopyRight             : SAMBAT FINANCE                                    *
  *****************************************************************************/
@@ -16,9 +16,7 @@ function App() {
   const fakeRequest = () => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(
-          "Successfully fetched data from a non-existent API of KindaCode.com"
-        );
+        resolve("Successfully fetched data from server");
       }, 2000);
     });
   };
@@ -40,15 +38,14 @@ function App() {
       <div style={{ display: isLoading ? "flex" : "none" }} className="modal">
         <div className="modal-content">
           <div className="loader"></div>
-          <div className="modal-text">Loading...</div>
+          <div className="modal-text">Please wait...</div>
         </div>
       </div>
 
       {/* main content */}
       <div className="container">
-        <h2>Welcome to KindaCode.com</h2>
         {/* This button is used to start the loading process */}
-        <button className="button" onClick={buttonHandler}>
+        <button className="button btn-primary" onClick={buttonHandler}>
           Start Loading Data
         </button>
         <br />
